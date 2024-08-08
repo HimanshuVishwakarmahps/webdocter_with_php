@@ -1,3 +1,15 @@
+<?php
+// include('connection.php'); 
+session_start();
+// echo"welcome".$_SESSION['user_name'];
+// $userprofile = $_SESSION['user_name'];
+if (!isset($_SESSION['user_name'])) 
+{
+   header('location:login.php');
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -7,11 +19,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my docter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<?php
+
+
+
+
+?>
 
 <body>
 
@@ -31,10 +49,11 @@
                         <li class="nav-text"><a href="#" class="hove-line">About</a></li>
                         <li class="nav-text"><a href="#" class="hove-line">Contact</a></li>
                         <div class="flex btn-section">
-                            <li class="nav-text btn "><a href="login/login.php">Login</a></li>
+                            <li class="nav-text btn " style="background-color:#ff00ff;" ;><a
+                                    href="logout.php">Logout</a></li>
                             <li class="nav-text">
                                 <i class="fa-solid fa-phone red"></i>
-                                <a href="tel:8429158627" class="hove-line red">+91 8429158627</a>
+                                <a href="tel:8429158627" class="hove-line red">+918429158627</a>
                             </li>
                         </div>
 
@@ -62,9 +81,10 @@
                                     commodi sunt modi enim molestiae dolore cum.</p>
                             </div>
                             <div class="button ">
-                                <a href="http://localhost/webdocter/home_page/login/register.php" class="btn-1" target="_blank">New Patint</a>
-                                
-                                <!-- <a href="#" class="btn-1 btn2">Call to Schedule</a> -->
+                                <a href="register.php" class="btn-1"
+                                    target="_blank">New Patint</a>
+
+                                <a href="display.php" class="btn-1 btn2">Veiw appoitment</a>
                             </div>
                         </section>
 
@@ -265,16 +285,16 @@
                     <a href="#" class="read-more">Read More <i class="fa-solid fa-right-long"></i></a>
 
                 </div>
-               
+
             </div>
-          
+
 
             <div class="discriv-more">
                 <div class="btn">
-                <a href="#">Discover More</a>
+                    <a href="#">Discover More</a>
                 </div>
             </div>
-          
+
         </section>
         <section>
             <div class="test-section-5">
@@ -282,22 +302,22 @@
                     <h1>Redy to take the next step?</h1>
                     <p>New Patint Special offer</p>
                 </div>
-              <div class="btn--5">
-                <a href="#">Request as a Patint<i class="fa-solid fa-right-long"></i></a>
-              </div>
+                <div class="btn--5">
+                    <a href="#">Request as a Patint<i class="fa-solid fa-right-long"></i></a>
+                </div>
             </div>
         </section>
         <section>
             <div class="main-contener-img">
-             
-                
+
+
                 <div class="tran-image">
                     <div class="image--22"></div>
                     <div class="text--22">
                         <button>FILLING GOOD</button>
                         <h1>Emproving every <br> of your life</h1>
                         <ul>
-                            <li><i class="fa-solid fa-check"></i>  Rehab a Sports injury</li>
+                            <li><i class="fa-solid fa-check"></i> Rehab a Sports injury</li>
                             <li><i class="fa-solid fa-check"></i>Bounce Back after giving birth</li>
                             <li><i class="fa-solid fa-check"></i>Kick your Migraines to the curb</li>
                             <li><i class="fa-solid fa-check"></i>Clean Up your Dite</li>
@@ -305,24 +325,28 @@
                         </ul>
                         <div class="discriv-more discriv-more-2 ">
                             <div class="btn btn-5">
-                            <a href="#">Discover More</a>
+                                <a href="#">Discover More</a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
-               
+
             </div>
         </section>
 
 
         <section>
             <div class="textsection-1">
-                <div class="text-item-box-1" style="padding: .8rem 1rem; border-radius:10rem; background-color: rgb(128, 124, 124);">QUR BLOG</div>
+                <div class="text-item-box-1"
+                    style="padding: .8rem 1rem; border-radius:10rem; background-color: rgb(128, 124, 124);">QUR BLOG
+                </div>
                 <div class="text-item-box-2">
                     <H1>Latast news</H1>
                 </div>
-                <div class="text-item-box-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quae dolor facilis eos distinctio debitis voluptatem praesentium amet corrupti alias, sapiente soluta eligendi nesciunt voluptate id delectus, repudiandae, impedit perferendis.</div>
+                <div class="text-item-box-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quae
+                    dolor facilis eos distinctio debitis voluptatem praesentium amet corrupti alias, sapiente soluta
+                    eligendi nesciunt voluptate id delectus, repudiandae, impedit perferendis.</div>
 
 
             </div>
@@ -331,14 +355,14 @@
 
 
         </section>
-        
-  
-      
+
+
+
 
 
 
     </main>
-    
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -388,3 +412,4 @@
 </body>
 
 </html>
+
